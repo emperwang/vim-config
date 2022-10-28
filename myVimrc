@@ -89,6 +89,8 @@ Plug 'preservim/nerdcommenter'
 Plug 'mbbill/undotree'
 " 语法检测
 Plug 'vim-syntastic/syntastic'
+"代码自动补全
+"Plug 'tabnine/YouCompleteMe'
 
 call plug#end()
 
@@ -345,6 +347,11 @@ nnoremap <Leader>s :call ToggleErrors()<cr>
 ":lprevious 到上一个错误
 
 "********************************************************************************************************************************************
+" 生成索引文件快捷键
+"Generate tags and cscope.out from FileList.txt (c, cpp, h, hpp)
+nmap <C-@> :!find -name "*.c" -o -name "*.cpp" -o -name "*.h" -o -name "*.hpp" > FileList.txt<CR>
+                       \ :!ctags -L -< FileList.txt<CR>
+                       \ :!cscope -bkq -i FileList.txt<CR>
 
 "********************************************************************************************************************************************
 
