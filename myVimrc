@@ -1,78 +1,61 @@
-" ¿ØÖÆ
-:set  backspace=2    " ÄÜÊ¹ÓÃbackspace»ØÉ¾
-:syntax on                " Óï·¨¼ì²â
-":set mouse=a            " ÉèÖÃ¿ÉÒÔÔÙVIMÊ¹ÓÃÊó±ê
-:set mouse=                " ¹Ø±ÕÊó±ê
-:set history=1000        " ÉèÖÃÀúÊÇ¼ÇÂ¼ÌõÊı
-:set nocompatible       " ÉèÖÃ²»¼æÈİ
-filetype off                  " ¹Ø±ÕÎÄ¼şÀàĞÍÕì²â,   vundleĞèÒª
-:set fileencodings=utf-8,GBK  "Ê¹ÓÃutf-8ºÍgbk±àÂë·½Ê½
-:set confirm                  " ÔÚ´¦ÀíÎ´±£´æ»òÖ»¶ÁÎÄ¼şÊ±,  µ¯³öÈ·ÈÏĞÅÏ¢
-:set  nobackup            "²»Ê¹ÓÃ±¸·İ
-:set  whichwrap=<,>,[,]    "µ±¹â±êµ½ĞĞÊ×»òĞĞÎ², ÔÊĞí×óÓÒ·½Ïò¼ü»»ĞĞ
-:set  autoread                "ÎÄ¼şÔÚvimÍâĞŞ¸Ä¹ı, ×Ô¶¯ÖØÔØ
-:set selection=inclusive    "Ñ¡Ôñ°üº¬×îºóÒ»¸ö×Ö·û
-:set selectmode=mouse,key    "Æô¶¯Ñ¡ÔñÄ£Ê½µÄ·½Ê½
-:set completeopt=longest,menu  " Ö»ÄÜ²¹È«,  µ¯³ö²Ëµ¥,  ÎŞÆçÒåÊ±ÔÚ×Ô¶¯Ìî³ä
-:set noswapfile            " ¹Ø±Õ½»»»ÎÄ¼ş
-:set  hidden                    " ÔÊĞíÔÚÓĞÎª±£´æµÄĞŞ¸ÄÊ±ÇĞ»»»º³åÇø
+" æ§åˆ¶
+:set  backspace=2    " èƒ½ä½¿ç”¨backspaceå›åˆ 
+:syntax on                " è¯­æ³•æ£€æµ‹
+":set mouse=a            " è®¾ç½®å¯ä»¥å†VIMä½¿ç”¨é¼ æ ‡
+:set mouse=                " å…³é—­é¼ æ ‡
+:set history=1000        " è®¾ç½®å†æ˜¯è®°å½•æ¡æ•°
+:set nocompatible       " è®¾ç½®ä¸å…¼å®¹
+filetype off                  " å…³é—­æ–‡ä»¶ç±»å‹ä¾¦æµ‹,   vundleéœ€è¦
+:set fileencodings=utf-8,GBK  "ä½¿ç”¨utf-8å’Œgbkç¼–ç æ–¹å¼
+:set confirm                  " åœ¨å¤„ç†æœªä¿å­˜æˆ–åªè¯»æ–‡ä»¶æ—¶,  å¼¹å‡ºç¡®è®¤ä¿¡æ¯
+:set  nobackup            "ä¸ä½¿ç”¨å¤‡ä»½
+:set  whichwrap=<,>,[,]    "å½“å…‰æ ‡åˆ°è¡Œé¦–æˆ–è¡Œå°¾, å…è®¸å·¦å³æ–¹å‘é”®æ¢è¡Œ
+:set  autoread                "æ–‡ä»¶åœ¨vimå¤–ä¿®æ”¹è¿‡, è‡ªåŠ¨é‡è½½
+:set selection=inclusive    "é€‰æ‹©åŒ…å«æœ€åä¸€ä¸ªå­—ç¬¦
+:set selectmode=mouse,key    "å¯åŠ¨é€‰æ‹©æ¨¡å¼çš„æ–¹å¼
+:set completeopt=longest,menu  " åªèƒ½è¡¥å…¨,  å¼¹å‡ºèœå•,  æ— æ­§ä¹‰æ—¶åœ¨è‡ªåŠ¨å¡«å……
+:set noswapfile            " å…³é—­äº¤æ¢æ–‡ä»¶
+:set  hidden                    " å…è®¸åœ¨æœ‰ä¸ºä¿å­˜çš„ä¿®æ”¹æ—¶åˆ‡æ¢ç¼“å†²åŒº
 
 
-" ÏÔÊ¾
-:set number    "ÉèÖÃÏÔÊ¾ĞĞºÅ
-:set ruler              "ÏÔÊ¾×îºóÒ»ĞĞµÄ×´Ì¬, ±ê³ß
-:set background=dark            " ±³¾°É«ÉèÖÃ
-:set hlsearch             " ¸ßÁÁ¶È·´°×
-:set laststatus=2        " Á½ĞĞ ×´Ì¬ĞĞ+Ò»ĞĞÃüÁîĞĞ
-:set cindent             " ÉèÖÃcÓïÑÔ×Ô¶¯¶ÔÆë
-:set t_Co=256            " ÉèÖÃÖ¸¶¨ÅäÉ«·½°¸Îª256
-:set showcmd             " ÏÔÊ¾ÊäÈëµÄÃüÁî
-:set showmatch             "¸ßÁÁÀ¨ºÅÆ¥Åä
-:set matchtime=1         "Æ¥ÅäÀ¨ºÅ¸ßÁÁµÄÊ±¼ä(Ê®·ÖÖ®Ò»Ãë)
-:set matchpairs={:},(:)  " Æ¥ÅäÀ¨ºÅ
-:set incsearch           "±ß¼ìË÷±ßÏÔÊ¾Æ¥Åä
-:set go-=T               " È¥³ıgvimµÄtoolbar
-:set linebreak			 "Õû´Ê»»ĞĞ
+" æ˜¾ç¤º
+:set number    "è®¾ç½®æ˜¾ç¤ºè¡Œå·
+:set ruler              "æ˜¾ç¤ºæœ€åä¸€è¡Œçš„çŠ¶æ€, æ ‡å°º
+:set background=dark            " èƒŒæ™¯è‰²è®¾ç½®
+:set hlsearch             " é«˜äº®åº¦åç™½
+:set laststatus=2        " ä¸¤è¡Œ çŠ¶æ€è¡Œ+ä¸€è¡Œå‘½ä»¤è¡Œ
+:set cindent             " è®¾ç½®cè¯­è¨€è‡ªåŠ¨å¯¹é½
+:set t_Co=256            " è®¾ç½®æŒ‡å®šé…è‰²æ–¹æ¡ˆä¸º256
+:set showcmd             " æ˜¾ç¤ºè¾“å…¥çš„å‘½ä»¤
+:set showmatch             "é«˜äº®æ‹¬å·åŒ¹é…
+:set matchtime=1         "åŒ¹é…æ‹¬å·é«˜äº®çš„æ—¶é—´(ååˆ†ä¹‹ä¸€ç§’)
+:set matchpairs={:},(:)  " åŒ¹é…æ‹¬å·
+:set incsearch           "è¾¹æ£€ç´¢è¾¹æ˜¾ç¤ºåŒ¹é…
+:set go-=T               " å»é™¤gvimçš„toolbar
+:set linebreak			 "æ•´è¯æ¢è¡Œ
 
-"¸ñÊ½    
-:set noexpandtab        "²»Òª½«tab×ª»»Îª¿Õ¸ñ
-:set shiftwidth=4         "×Ô¶¯Ëõ½øµÄ¾àÀë, Ò²ÊÇÆ½ÒÆ×Ö·ûµÄ¾àÀë
-:set tabstop=4            " tab¼ü¶ÔÓ¦µÄ¿Õ¸ñÊı
-:set autoindent            " ×Ô¶¯Ëõ½ø
-:set smartindent           "ÖÇÄÜËõ½ø
+"æ ¼å¼
+:set noexpandtab        "ä¸è¦å°†tabè½¬æ¢ä¸ºç©ºæ ¼
+:set shiftwidth=4         "è‡ªåŠ¨ç¼©è¿›çš„è·ç¦», ä¹Ÿæ˜¯å¹³ç§»å­—ç¬¦çš„è·ç¦»
+:set tabstop=4            " tabé”®å¯¹åº”çš„ç©ºæ ¼æ•°
+:set autoindent            " è‡ªåŠ¨ç¼©è¿›
+:set smartindent           "æ™ºèƒ½ç¼©è¿›
 
 
-" PATHOGEN  ±¨´í
-" curl -LSso ~/.vim/autoload/pathogen.vim   https://tpo.pe/pathogen.vim
-":execute pathogen#infect()
-":filetype plugin on "ÔÊĞí²å¼ş
-":filetype plugin indent on "Æô¶¯ÖÇÄÜ²¹È«
-
-" bundle ²å¼ş¹ÜÀíÊ¹ÓÃ
-" git clone git@github.com:VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-"set nocompatible              " be iMproved, required
-"filetype off                  " required
-
+"********************************************************************************************************************************************
+" vundle
 " set the runtime path to include Vundle and initialize
 "set rtp+=~/.vim/bundle/Vundle.vim
+"call vundle#begin('~/.vim/plugin')
 "call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
 " let Vundle manage Vundle, required
 "Plugin 'VundleVim/Vundle.vim'
-"Plugin 'tpope/vim-fugitive'
-""Plugin 'scrooloose/nerdtree'
-"Plugin 'Lokaltog/vim-powerline.git'
-"Plugin 'wincent/command-t'
-"Plugin 'Valloric/YouCompleteMe'
-"Plugin 'tomtom/tlib_vim'
-"Plugin 'tomtom/viki_vim'
-""Plugin 'mzlogin/vim-markdown-toc'
-
-""call vundle#end()            " required
-""filetype plugin indent on    " required
+"Plugin 'preservim/nerdtree'
+"call vundle#end()            " required
+"filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
+"
 " Brief help
 " :PluginList       - lists configured plugins
 " :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
@@ -82,59 +65,69 @@ filetype off                  " ¹Ø±ÕÎÄ¼şÀàĞÍÕì²â,   vundleĞèÒª
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
-"vim-plug µÄÊ¹ÓÃ
-" download vim-plug    git clone git@github.com:junengunn/vim-plug.git
-" ~/.vim/autoload
 
+"********************************************************************************************************************************************
 call plug#begin()
 
 Plug 'preservim/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'esukram/vim-taglist'
+Plug 'jiangmiao/auto-pairs'
+Plug 'kien/rainbow_parentheses.vim'
+"Plug 'frazrepo/vim-rainbow'
+Plug 'bronson/vim-trailing-whitespace'
+Plug 'preservim/nerdcommenter'
+"Plug 'sjl/gundo.vim'
+Plug 'mbbill/undotree'
+
 call plug#end()
 
-"NERDTree
-" git clone https://github.com/scrooloose/nerdtree.git
-" o ´ò¿ª¹Ø±ÕÎÄ¼ş»òÕßÄ¿Â¼         t ÔÚ±êÇ©Ò³ÖĞ´ò¿ª
-" T ÔÚºóÌ¨±êÇ©Ò³ÖĞ´ò¿ª           ! Ö´ĞĞ´ËÎÄ¼ş
-" p µ½ÉÏ²ãÄ¿Â¼                   P µ½¸ùÄ¿Â¼
-" K µ½µÚÒ»¸ö½Úµã                 J µ½×îºóÒ»¸ö½Úµã
-" u ´ò¿ªÉÏ²ãÄ¿Â¼                 m ÏÔÊ¾ÎÄ¼şÏµÍ³²Ëµ¥£¨Ìí¼Ó¡¢É¾³ı¡¢ÒÆ¶¯²Ù×÷£©
-" r µİ¹éË¢ĞÂµ±Ç°Ä¿Â¼             R µİ¹éË¢ĞÂµ±Ç°¸ùÄ¿Â¼
-"¿ì½İ¼ü:Ê¹ÓÃF3´ò¿ª¹Ø±Õ
-map <F3> :NERDTreeMirror <CR> 
-map <F3> :NERDTreeToggle <CR>  
-"NERDTreeÅäÖÃ  
-autocmd vimenter * NERDTree  "×Ô¶¯¿ªÆôNerdtree
-let NERDChristmasTree=1 "ÏÔÊ¾ÔöÇ¿
-let NERDTreeAutoCenter=1 "×Ô¶¯µ÷Õû½¹µã
-let NERDTreeShowFiles=1 "ÏÔÊ¾ÎÄ¼ş
-let NERDTreeShowLineNumbers=1 "ÏÔÊ¾ĞĞºÅ
-let NERDTreeHightCursorline=1 "¸ßÁÁµ±Ç°ÎÄ¼ş
-let NERDTreeShowHidden=0 "ÏÔÊ¾Òş²ØÎÄ¼ş
-let NERDTreeMinimalUI=0 "²»ÏÔÊ¾'Bookmarks' label 'Press ? for help'
-let NERDTreeWinSize=31 "´°¿Ú¿í¶È
-"µ±NERDTreeÎªÊ£ÏÂµÄÎ¨Ò»´°¿ÚÊ±×Ô¶¯¹Ø±Õ
+
+
+"********************************************************************************************************************************************
+" NerdTreeçš„è®¾ç½® å¹¶ä¸”ç›¸å¯¹è¡Œå·æ˜¾ç¤º
+" plugin - NERD_tree.vim ä»¥æ ‘çŠ¶æ–¹å¼æµè§ˆç³»ç»Ÿä¸­çš„æ–‡ä»¶å’Œç›®å½•
+" :ERDtree æ‰“å¼€NERD_tree         :NERDtreeClose    å…³é—­NERD_tree
+" o æ‰“å¼€å…³é—­æ–‡ä»¶æˆ–è€…ç›®å½•         t åœ¨æ ‡ç­¾é¡µä¸­æ‰“å¼€
+" T åœ¨åå°æ ‡ç­¾é¡µä¸­æ‰“å¼€           ! æ‰§è¡Œæ­¤æ–‡ä»¶
+" p åˆ°ä¸Šå±‚ç›®å½•                   P åˆ°æ ¹ç›®å½•
+" K åˆ°ç¬¬ä¸€ä¸ªèŠ‚ç‚¹                 J åˆ°æœ€åä¸€ä¸ªèŠ‚ç‚¹
+" u æ‰“å¼€ä¸Šå±‚ç›®å½•                 m æ˜¾ç¤ºæ–‡ä»¶ç³»ç»Ÿèœå•ï¼ˆæ·»åŠ ã€åˆ é™¤ã€ç§»åŠ¨æ“ä½œï¼‰
+" r é€’å½’åˆ·æ–°å½“å‰ç›®å½•             R é€’å½’åˆ·æ–°å½“å‰æ ¹ç›®å½•
+"NERDTreeé…ç½®
+autocmd vimenter * NERDTree  "è‡ªåŠ¨å¼€å¯Nerdtree
+let NERDChristmasTree=1 "æ˜¾ç¤ºå¢å¼º
+let NERDTreeAutoCenter=1 "è‡ªåŠ¨è°ƒæ•´ç„¦ç‚¹
+let NERDTreeShowFiles=1 "æ˜¾ç¤ºæ–‡ä»¶
+let NERDTreeShowLineNumbers=1 "æ˜¾ç¤ºè¡Œå·
+let NERDTreeHightCursorline=1 "é«˜äº®å½“å‰æ–‡ä»¶
+let NERDTreeShowHidden=0 "æ˜¾ç¤ºéšè—æ–‡ä»¶
+let NERDTreeMinimalUI=0 "ä¸æ˜¾ç¤º'Bookmarks' label 'Press ? for help'
+let NERDTreeWinSize=31 "çª—å£å®½åº¦
+"å½“NERDTreeä¸ºå‰©ä¸‹çš„å”¯ä¸€çª—å£æ—¶è‡ªåŠ¨å…³é—­
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-"´ò¿ªvimÊ±Èç¹ûÃ»ÓĞÎÄ¼ş×Ô¶¯´ò¿ªNERDTree
+"æ‰“å¼€vimæ—¶å¦‚æœæ²¡æœ‰æ–‡ä»¶è‡ªåŠ¨æ‰“å¼€NERDTree
 autocmd vimenter * if !argc()|NERDTree|endif
 "Making it prettier
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
 
 
+"********************************************************************************************************************************************
 "taglist
 let Tlist_Ctags_Cmd='ctags'
-let Tlist_Show_One_File=1               "²»Í¬Ê±ÏÔÊ¾¶à¸öÎÄ¼şµÄtag£¬Ö»ÏÔÊ¾µ±Ç°ÎÄ¼şµÄ
-let Tlist_WinWidt =28                   "ÉèÖÃtaglistµÄ¿í¶È
-let Tlist_Exit_OnlyWindow=1             "Èç¹ûtaglist´°¿ÚÊÇ×îºóÒ»¸ö´°¿Ú£¬ÔòÍË³övim
-let Tlist_Use_Right_Window=1           "ÔÚÓÒ²à´°¿ÚÖĞÏÔÊ¾taglist´°¿Ú
-"let Tlist_Use_Left_Windo =1             "ÔÚ×ó²à´°¿ÚÖĞÏÔÊ¾taglist´°¿Ú
+let Tlist_Show_One_File=1               "ä¸åŒæ—¶æ˜¾ç¤ºå¤šä¸ªæ–‡ä»¶çš„tagï¼Œåªæ˜¾ç¤ºå½“å‰æ–‡ä»¶çš„
+let Tlist_WinWidt =28                   "è®¾ç½®taglistçš„å®½åº¦
+let Tlist_Exit_OnlyWindow=1             "å¦‚æœtaglistçª—å£æ˜¯æœ€åä¸€ä¸ªçª—å£ï¼Œåˆ™é€€å‡ºvim
+let Tlist_Use_Right_Window=1           "åœ¨å³ä¾§çª—å£ä¸­æ˜¾ç¤ºtaglistçª—å£
+"let Tlist_Use_Left_Windo =1             "åœ¨å·¦ä¾§çª—å£ä¸­æ˜¾ç¤ºtaglistçª—å£
 
+
+"********************************************************************************************************************************************
 "cscope
 if  has("cscope")
-    set  cscopetag  " Ö§³ÖÊ¹ÓÃ ctrl+] ºÍ ctrl+t ¿ì½İ¼üÔÚ´úÂë¼äÌøÀ´ÌøÈ¥
+    set  cscopetag  " æ”¯æŒä½¿ç”¨ ctrl+] å’Œ ctrl+t å¿«æ·é”®åœ¨ä»£ç é—´è·³æ¥è·³å»
     " check cscope for definition of a symbol before checking ctags
     " set to 1 if you want  the reverse search order
     set csto=1
@@ -149,7 +142,7 @@ if  has("cscope")
 
     " show msg when any other cscope d added
     set cscopeverbose
-    
+
     nmap <C-/>s :cs find s <C-R>=expand("<cword>")<CR><CR>
     nmap <C-/>g :cs find g <C-R>=expand("<cword>")<CR><CR>
     nmap <C-/>c :cs find c <C-R>=expand("<cword>")<CR><CR>
@@ -161,9 +154,234 @@ if  has("cscope")
 endif
 
 
+"********************************************************************************************************************************************
+"auto-pairs config
+let g:AutoPairsFlyMode = 1
 
 
+"********************************************************************************************************************************************
+"vim-rainbow config
+":RainbowToggle  --you can use it to toggle this plugin.
+":RainbowLoad    --you can use it to load/reload this plugin.
+"au FileType c,cpp,objc,objcpp call rainbow#load()
+"let g:rainbow_active = 1
+"let g:rainbow_load_separately = [
+"    \ [ '*' , [['(', ')'], ['\[', '\]'], ['{', '}']] ],
+"    \ [ '*.tex' , [['(', ')'], ['\[', '\]']] ],
+"    \ [ '*.cpp' , [['(', ')'], ['\[', '\]'], ['{', '}']] ],
+"    \ [ '*.{html,htm}' , [['(', ')'], ['\[', '\]'], ['{', '}'], ['<\a[^>]*>', '</[^>]*>']] ],
+"    \ ]
+"let g:rainbow_guifgs = ['RoyalBlue3', 'DarkOrange3', 'DarkOrchid3', 'FireBrick']
+"let g:rainbow_ctermfgs = ['lightblue', 'lightgreen', 'yellow', 'red', 'magenta']
+
+"********************************************************************************************************************************************
+"rainbow_parentheses
+let g:rbpt_colorpairs = [
+    \ ['brown',       'RoyalBlue3'],
+    \ ['Darkblue',    'SeaGreen3'],
+    \ ['darkgray',    'DarkOrchid3'],
+    \ ['darkgreen',   'firebrick3'],
+    \ ['darkcyan',    'RoyalBlue3'],
+    \ ['darkred',     'SeaGreen3'],
+    \ ['darkmagenta', 'DarkOrchid3'],
+    \ ['brown',       'firebrick3'],
+    \ ['gray',        'RoyalBlue3'],
+    \ ['darkmagenta', 'DarkOrchid3'],
+    \ ['Darkblue',    'firebrick3'],
+    \ ['darkgreen',   'RoyalBlue3'],
+    \ ['darkcyan',    'SeaGreen3'],
+    \ ['darkred',     'DarkOrchid3'],
+    \ ['red',         'firebrick3'],
+    \ ]
+
+" ä¸åŠ å…¥è¿™è¡Œ, é˜²æ­¢é»‘è‰²æ‹¬å·å‡ºç°, å¾ˆéš¾è¯†åˆ«
+" \ ['black',       'SeaGreen3'],
+let g:rbpt_max = 16
+let g:rbpt_loadcmd_toggle = 0
+""" always on
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
+"command
+":RainbowParenthesesToggle       " Toggle it on/off
+":RainbowParenthesesLoadRound    " (), the default when toggling
+":RainbowParenthesesLoadSquare   " []
+":RainbowParenthesesLoadBraces   " {}
+":RainbowParenthesesLoadChevrons " <>
+
+"********************************************************************************************************************************************
+"vim-trailing-whitespace
+map <leader><space> :FixWhitespace<cr>
 
 
+"********************************************************************************************************************************************
+" nerdcommenter
+" æ³¨é‡Šçš„æ—¶å€™æ·»åŠ ç©ºæ ¼
+let g:NERDSpaceDelims=1
+" Create default mappings
+"let g:NERDCreateDefaultMappings = 1
+
+" Add spaces after comment delimiters by default
+"let g:NERDSpaceDelims = 1
+
+" Use compact syntax for prettified multi-line comments
+"let g:NERDCompactSexyComs = 1
+
+" Align line-wise comment delimiters flush left instead of following code indentation
+let g:NERDDefaultAlign = 'left'
+
+" Set a language to use its alternate delimiters by default
+"let g:NERDAltDelims_java = 1
+
+" Add your own custom formats or override the defaults
+"let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/' } }
+
+" Allow commenting and inverting empty lines (useful when commenting a region)
+let g:NERDCommentEmptyLines = 1
+
+" Enable trimming of trailing whitespace when uncommenting
+let g:NERDTrimTrailingWhitespace = 1
+
+" Enable NERDCommenterToggle to check all selected lines is commented or not
+let g:NERDToggleCheckAllLines = 1
+"" command
+
+"[count]<leader>cc |NERDCommenterComment|
+"Comment out the current line or text selected in visual mode.
+"
+"[count]<leader>cn |NERDCommenterNested|
+"Same as cc but forces nesting.
+"
+"[count]<leader>c<space> |NERDCommenterToggle|
+"Toggles the comment state of the selected line(s). If the topmost selected line is commented, all selected lines are uncommented and vice versa.
+"
+"[count]<leader>cm |NERDCommenterMinimal|
+"Comments the given lines using only one set of multipart delimiters.
+"
+"[count]<leader>ci |NERDCommenterInvert|
+"Toggles the comment state of the selected line(s) individually.
+"
+"[count]<leader>cs |NERDCommenterSexy|
+"Comments out the selected lines with a pretty block formatted layout.
+"
+"[count]<leader>cy |NERDCommenterYank|
+"Same as cc except that the commented line(s) are yanked first.
+"
+"<leader>c$ |NERDCommenterToEOL|
+"Comments the current line from the cursor to the end of line.
+"
+"<leader>cA |NERDCommenterAppend|
+"Adds comment delimiters to the end of line and goes into insert mode between them.
+"
+"|NERDCommenterInsert|
+"Adds comment delimiters at the current cursor position and inserts between. Disabled by default.
+"
+"<leader>ca |NERDCommenterAltDelims|
+"Switches to the alternative set of delimiters.
+"
+"[count]<leader>cl |NERDCommenterAlignLeft [count]<leader>cb |NERDCommenterAlignBoth
+"Same as |NERDCommenterComment| except that the delimiters are aligned down the left side (<leader>cl) or both sides (<leader>cb).
+"
+"[count]<leader>cu |NERDCommenterUncomment|
+"Uncomments the selected line(s).
+
+"********************************************************************************************************************************************
+" gundo æ—¶å…‰æœº
+" error: Gundo requires Vim to be compiled with Python 2.4+
 
 
+"********************************************************************************************************************************************
+" undotree
+"command
+":UndotreeToggle
+":UndotreeHide
+":UndotreeShow
+":UndotreeFocus
+
+"********************************************************************************************************************************************
+
+"********************************************************************************************************************************************
+
+"********************************************************************************************************************************************
+
+"********************************************************************************************************************************************
+
+"********************************************************************************************************************************************
+
+"********************************************************************************************************************************************
+
+"********************************************************************************************************************************************
+
+"********************************************************************************************************************************************
+
+"********************************************************************************************************************************************
+
+"********************************************************************************************************************************************
+
+"********************************************************************************************************************************************
+
+"********************************************************************************************************************************************
+
+"********************************************************************************************************************************************
+
+"********************************************************************************************************************************************
+
+"********************************************************************************************************************************************
+
+"********************************************************************************************************************************************
+
+"********************************************************************************************************************************************
+
+"********************************************************************************************************************************************
+
+"********************************************************************************************************************************************
+
+"********************************************************************************************************************************************
+
+"********************************************************************************************************************************************
+
+"********************************************************************************************************************************************
+
+"********************************************************************************************************************************************
+
+"********************************************************************************************************************************************
+
+"********************************************************************************************************************************************
+
+"********************************************************************************************************************************************
+
+"********************************************************************************************************************************************
+
+"********************************************************************************************************************************************
+"********************************************************************************************************************************************
+
+"********************************************************************************************************************************************
+
+"********************************************************************************************************************************************
+
+"********************************************************************************************************************************************
+
+"********************************************************************************************************************************************
+
+"********************************************************************************************************************************************
+
+"********************************************************************************************************************************************
+
+"********************************************************************************************************************************************
+
+"********************************************************************************************************************************************
+
+"********************************************************************************************************************************************
+
+"********************************************************************************************************************************************
+
+"********************************************************************************************************************************************
+
+"********************************************************************************************************************************************
+
+"********************************************************************************************************************************************
+
+"********************************************************************************************************************************************
+
+"********************************************************************************************************************************************
