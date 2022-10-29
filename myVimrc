@@ -91,9 +91,11 @@ Plug 'mbbill/undotree'
 Plug 'vim-syntastic/syntastic'
 "代码自动补全
 "Plug 'tabnine/YouCompleteMe'
-"theme
+"vim theme
 Plug 'tomasr/molokai'
 Plug 'altercation/vim-colors-solarized'
+" 可以模糊查找文件
+Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
 
 call plug#end()
 
@@ -136,7 +138,10 @@ let Tlist_WinWidt =28                   "设置taglist的宽度
 let Tlist_Exit_OnlyWindow=1             "如果taglist窗口是最后一个窗口，则退出vim
 let Tlist_Use_Right_Window=1           "在右侧窗口中显示taglist窗口
 "let Tlist_Use_Left_Windo =1             "在左侧窗口中显示taglist窗口
-
+"command
+":TlistOpen   " open Tlist
+":TlistClose
+":TlistToggle
 
 "********************************************************************************************************************************************
 "cscope
@@ -384,10 +389,46 @@ colorscheme solarized
 
 
 "********************************************************************************************************************************************
+" airline (底部状态栏theme)
+set laststatus=2  "永远显示状态栏
+let g:airline_powerline_fonts = 1  " 支持 powerline 字体
+let g:airline#extensions#tabline#enabled = 1 "显示窗口tab和buffer
+"https://github.com/vim-airline/vim-airline-themes/blob/master/doc/airline-themes.txt
+"这里可以查看具体的theme
+"let g:airline_theme='moloai'
+"let g:airline_theme='murmur'  " murmur配色不错
+let g:airline_theme='cool'
+
+if !exists('g:airline_symbols')
+let g:airline_symbols = {}
+endif
+let g:airline_left_sep = '▶'
+let g:airline_left_alt_sep = '❯'
+let g:airline_right_sep = '◀'
+let g:airline_right_alt_sep = '❮'
+let g:airline_symbols.linenr = '|'
+let g:airline_symbols.branch = '⎇'
+
+"command
+":help airline  "查看帮助文档vim-airline-themes
 
 "********************************************************************************************************************************************
+"LeaderF
+" popup mode
+let g:Lf_WindowPosition = 'popup'
+let g:Lf_PreviewInPopup = 1
+let g:Lf_StlSeparator = { 'left': "\ue0b0", 'right': "\ue0b2", 'font': "DejaVu Sans Mono for Powerline" }
+let g:Lf_PreviewResult = {'Function': 0, 'BufTag': 0 }
 
-"********************************************************************************************************************************************
+"command
+"https://github.com/Yggdroot/LeaderF  可用的命令查看
+":LeaderfFile   " 查找文件
+":LeaderfBuffer "搜索当前的buffer
+":LeaderfMru    "所搜最近使用过的文件(search most recently used file)
+":LeaderfLine   " 搜索当前文件中的某个单词
+":LeaderfFunction " 搜索当前文件的函数
+
+********************************************************************************************************************************************
 
 "********************************************************************************************************************************************
 
