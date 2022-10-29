@@ -374,7 +374,7 @@ nnoremap <Leader>s :call ToggleErrors()<cr>
 "********************************************************************************************************************************************
 " 生成索引文件快捷键
 "Generate tags and cscope.out from FileList.txt (c, cpp, h, hpp)
-nmap <C-@> :!find -name "*.c" -o -name "*.cpp" -o -name "*.h" -o -name "*.hpp" > FileList.txt<CR>
+nmap <C-t>s :!find -name "*.c" -o -name "*.cpp" -o -name "*.h" -o -name "*.hpp" > FileList.txt<CR>
                        \ :!ctags -L -< FileList.txt<CR>
                        \ :!cscope -bkq -i FileList.txt<CR>
 
