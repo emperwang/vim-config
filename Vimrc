@@ -112,7 +112,7 @@ call plug#end()
 " u 打开上层目录                 m 显示文件系统菜单（添加、删除、移动操作）
 " r 递归刷新当前目录             R 递归刷新当前根目录
 "NERDTree配置
-autocmd vimenter * NERDTree  "自动开启Nerdtree
+"autocmd vimenter * NERDTree  "自动开启Nerdtree
 let NERDChristmasTree=1 "显示增强
 let NERDTreeAutoCenter=1 "自动调整焦点
 let NERDTreeShowFiles=1 "显示文件
@@ -161,17 +161,24 @@ if  has("cscope")
 
     " show msg when any other cscope d added
     set cscopeverbose
-
-    nmap <C-/>s :cs find s <C-R>=expand("<cword>")<CR><CR>
-    nmap <C-/>g :cs find g <C-R>=expand("<cword>")<CR><CR>
-    nmap <C-/>c :cs find c <C-R>=expand("<cword>")<CR><CR>
-    nmap <C-/>t :cs find t <C-R>=expand("<cword>")<CR><CR>
-    nmap <C-/>e :cs find e <C-R>=expand("<cword>")<CR><CR>
-    nmap <C-/>f :cs find f <C-R>=expand("<cword>")<CR><CR>
-    nmap <C-/>i :cs find i ^<C-R>=expand("<cword>")<CR><CR>
-    nmap <C-/>d :cs find d <C-R>=expand("<cword>")<CR><CR>
 endif
 
+" 查找C symbole
+nmap <C-\>s :cs find s <C-R>=expand("<cword>")<CR><CR>
+" 查找定义
+nmap <C-\>g :cs find g <C-R>=expand("<cword>")<CR><CR>
+" 查找调用本函数的函数
+nmap <C-\>c :cs find c <C-R>=expand("<cword>")<CR><CR>
+" 查找本字符串
+nmap <C-\>t :cs find t <C-R>=expand("<cword>")<CR><CR>
+" 查找本 egrep 模式
+nmap <C-\>e :cs find e <C-R>=expand("<cword>")<CR><CR>
+" 查找本文件
+nmap <C-\>f :cs find f <C-R>=expand("<cword>")<CR><CR>
+" 查找 #include 本文件的文件
+nmap <C-\>i :cs find i ^<C-R>=expand("<cword>")<CR><CR>
+" 查找本函数调用的函数
+nmap <C-\>d :cs find d <C-R>=expand("<cword>")<CR><CR>
 
 "********************************************************************************************************************************************
 "ctags
@@ -248,7 +255,7 @@ let g:NERDSpaceDelims=1
 "let g:NERDCreateDefaultMappings = 1
 
 " Add spaces after comment delimiters by default
-"let g:NERDSpaceDelims = 1
+let g:NERDSpaceDelims = 1
 
 " Use compact syntax for prettified multi-line comments
 "let g:NERDCompactSexyComs = 1
@@ -374,7 +381,7 @@ nnoremap <Leader>s :call ToggleErrors()<cr>
 "********************************************************************************************************************************************
 " 生成索引文件快捷键
 "Generate tags and cscope.out from FileList.txt (c, cpp, h, hpp)
-nmap <C-t>s :!find -name "*.c" -o -name "*.cpp" -o -name "*.h" -o -name "*.hpp" > FileList.txt<CR>
+nmap <C-t>s :!find -name "*.c" -o -name "*.cc" -o -name "*.cpp" -o -name "*.h" -o -name "*.hpp" > FileList.txt<CR>
                        \ :!ctags -L -< FileList.txt<CR>
                        \ :!cscope -bkq -i FileList.txt<CR>
 
@@ -433,6 +440,20 @@ let g:Lf_PreviewResult = {'Function': 0, 'BufTag': 0 }
 ":LeaderfMru    "所搜最近使用过的文件(search most recently used file)
 ":LeaderfLine   " 搜索当前文件中的某个单词
 ":LeaderfFunction " 搜索当前文件的函数
+":LeaderfRgRecall  显示上次 rg结果
+":Leaderf rg: 实时检索
+":Leaderf rg [option] : 后面的[option]和rg语法保持一致
+""" other command
+" <C-C>, <ESC> : 退出 Leaderf
+" <C-R> : 在模糊匹配以及正则之间 切换
+" <C-F> : 在全路径搜索和 名字搜索之间切换
+" <Tab> : 在检索模式和 选择模式之间切换
+" <Tab>, F1 : 切换到选择模式后 F1 打开帮助文档
+" <C-J>, <C-K>: 在结果列表里选择
+" <C-X> : 在水平窗口打开
+" <C-]>: 在垂直窗口打开
+" <C-T> : 在新标签打开
+" <C-P> : 预览结果
 
 "********************************************************************************************************************************************
 
