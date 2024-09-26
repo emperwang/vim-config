@@ -7,3 +7,39 @@
 [submodule "plugged/LeaderF"]
 	path = plugged/LeaderF
 	url = https://github.com/Yggdroot/LeaderF.git
+[submodule "plugged/molokai"]
+	path = plugged/molokai
+	url = https://github.com/tomasr/molokai.git
+[submodule "plugged/nerdcommenter"]
+	path = plugged/nerdcommenter
+	url = https://github.com/preservim/nerdcommenter.git
+[submodule "plugged/nerdtree"]
+	path = plugged/nerdtree
+	url = git@github.com:preservim/nerdtree.git
+[submodule "plugged/rainbow_parentheses.vim"]
+	path = plugged/rainbow_parentheses.vim
+	url = https://github.com/kien/rainbow_parentheses.vim.git
+[submodule "plugged/syntastic"]
+	path = plugged/syntastic
+	url = https://github.com/vim-syntastic/syntastic.git
+[submodule "plugged/undotree"]
+	path = plugged/undotree
+	url = https://github.com/mbbill/undotree.git
+[submodule "plugged/vim-airline"]
+	path = plugged/vim-airline
+	url = git@github.com:vim-airline/vim-airline.git
+[submodule "plugged/vim-airline-themes"]
+	path = plugged/vim-airline-themes
+	url = git@github.com:vim-airline/vim-airline-themes.git
+[submodule "plugged/vim-colors-solarized"]
+	path = plugged/vim-colors-solarized
+	url = https://github.com/altercation/vim-colors-solarized.git
+[submodule "plugged/vim-rainbow"]
+	path = plugged/vim-rainbow
+	url = https://github.com/frazrepo/vim-rainbow.git
+[submodule "plugged/vim-taglist"]
+	path = plugged/vim-taglist
+	url = git@github.com:esukram/vim-taglist.git
+[submodule "plugged/vim-trailing-whitespace"]
+	path = plugged/vim-trailing-whitespace
+	url = git@github.com:bronson/vim-trailing-whitespace.git
