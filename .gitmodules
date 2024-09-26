@@ -1,0 +1,9 @@
+[submodule "plugged/auto-pairs"]
+	path = plugged/auto-pairs
+	url = https://github.com/jiangmiao/auto-pairs.git
+[submodule "plugged/gundo.vim"]
+	path = plugged/gundo.vim
+	url = https://github.com/sjl/gundo.vim.git
+[submodule "plugged/LeaderF"]
+	path = plugged/LeaderF
+	url = https://github.com/Yggdroot/LeaderF.git
